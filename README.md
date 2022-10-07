@@ -28,4 +28,5 @@ Variability of the outcomes was assessed in terms of group-level consistency, in
 * Please check that the path to data is correct prior to running the codes
 * Please check that the path to the fieldtrip toolbox is correct prior to running the codes
 * Please add the [Brainstorm][1] toolbox to your matlab paths.
-[1]: https://neuroimage.usc.edu/brainstorm/Introduction
+
+[1] : https://neuroimage.usc.edu/brainstorm/Introduction
