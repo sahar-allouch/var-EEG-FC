@@ -23,7 +23,7 @@ Variability of the outcomes was assessed in terms of group-level consistency, in
 
 ## Running the code:
 - To obtain the connectivity matrices of all subjects and epochs (over all conditions), run "run_all()".
-- To get the results quantification (group-level consistency, between-subjects similarity, within-subjects similarity) run "get_results_quantif()".
+- To get the results quantification (group-level consistency, between-subjects similarity, within-subjects similarity), run "get_results_quantif()".
 
 * Please check that the path to data is correct prior to running the codes
 * Please check that the path to the fieldtrip toolbox is correct prior to running the codes
