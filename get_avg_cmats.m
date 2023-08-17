@@ -15,11 +15,8 @@ nb_inv = length(inv);
 conn = {'plv','pli','aec','plv_orth','aec_orth',...
     'plv_corr_pairwise','aec_corr_pairwise','wpli'};
 
-bands = {'theta','beta','gamma'};
+bands = {'theta','delta','alpha','beta','gamma'};
 
-% output matrix preallocation
-avg_cmats = zeros(length(conn),nb_rois,nb_rois);
-                
 % loop over all subjects
 for s = 1:nb_subs
     
@@ -37,6 +34,9 @@ for s = 1:nb_subs
             % loop over inverse algorithms
             for iv = 1:nb_inv
                 
+                % output matrix preallocation
+                avg_cmats = zeros(length(conn),nb_rois,nb_rois);
+                
                 % get all epochs filenames for subject s
                 files = dir([path '/' subs{s} '/cmats_' inv{iv} '_' mon{m} '_' bands{b} '*.mat']);
                 
@@ -48,7 +48,7 @@ for s = 1:nb_subs
                     
                 end
                 
-                avg_cmats = avg_cmats./length(files);                
+                avg_cmats = avg_cmats./length(files);
                 
                 
                 save([path_to_save '/' subs{s} '/avg_cmats_' inv{iv} '_' mon{m} '_' bands{b}],'avg_cmats')
@@ -57,5 +57,4 @@ for s = 1:nb_subs
     end
     
 end
-    
-    
+
